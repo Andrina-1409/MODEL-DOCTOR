@@ -2,7 +2,7 @@
 
 ## Current level
 
-Level 0 - Scaffold (completed)
+Level 1 - Data, CNN, fault injection, probes (blocked: dependencies)
 
 ## Completed work
 
@@ -100,6 +100,14 @@ Level 0 - Scaffold (completed)
 - `git push` - pushed the post-push handoff record.
 - `git ls-remote origin refs/heads/main` - verified that the local post-push
   handoff commit is present on `origin/main`.
+- Python import checks for `torch`, `torchvision`, `numpy`, `pandas`,
+  `scikit-learn`, and `joblib` - failed because the Level 0 dependencies are not
+  installed in the active Python 3.14 environment.
+- `python -m pip install -r requirements.txt` - failed during installation with
+  `OSError: [Errno 28] No space left on device`.
+- `py -3.12 -c "import torch ..."` - confirmed that Python 3.12 also lacks
+  PyTorch.
+- `Get-PSDrive -Name C` - reported 181,944,320 bytes free on drive `C:`.
 
 ## Tests actually executed
 
@@ -119,10 +127,16 @@ Level 0 - Scaffold (completed)
 
 - The standalone `pytest` executable remains outside `PATH` because pip installed
   it in the user scripts directory. `python -m pytest` is available and passed.
+- The ML and scientific dependencies from `requirements.txt` are not installed
+  in the active environment. Installation failed because drive `C:` has only
+  181,944,320 bytes free.
 
 ## Blocked items
 
-- None.
+- Level 1 validation is pending installation of the existing project
+  dependencies.
+- Dependency installation is blocked by insufficient disk space. No project
+  files or caches have been deleted.
 
 ## Git state
 
@@ -143,14 +157,18 @@ Level 0 - Scaffold (completed)
 
 ## Exact next action
 
-- Commit and push this final GitHub-verification handoff update. After that,
-  await explicit direction before beginning Level 1.
+- Free sufficient space on drive `C:` or explicitly authorize removal of the
+  pip package cache. Then install the existing requirements, implement and test
+  Level 1 only, and commit it with the required Level 1 commit message.
 
 ## Do not change or do yet
 
-- Do not begin Level 1 or any later level without new user direction.
-- Do not add ML/data/training/fault/model-zoo/feature/doctor/Grad-CAM/frontend/
-  backend implementation.
+- Do not begin Level 2 or any later level until Level 1 is implemented, tested,
+  documented, committed, and pushed.
+- Do not add model-zoo, feature, doctor, Grad-CAM, frontend, or backend
+  implementation during Level 1.
+- Do not delete pip caches, project files, or other user data without explicit
+  user direction.
 - Do not add FastAPI or Spring Boot dependencies.
 - Do not invent test or experiment results.
 - Do not start Level 1 until the Level 0 commit exists and Git state has been
