@@ -94,6 +94,9 @@ Level 0 - Scaffold (completed)
   with no output, confirming that the selected GitHub repository had no refs.
 - `git remote add origin "https://github.com/Andrina-1409/MODEL-DOCTOR.git"` -
   configured the selected GitHub repository as `origin`.
+- `git push --set-upstream origin main` - pushed the Level 0 commit to
+  `https://github.com/Andrina-1409/MODEL-DOCTOR.git` and set `main` to track
+  `origin/main`.
 
 ## Tests actually executed
 
@@ -125,19 +128,19 @@ Level 0 - Scaffold (completed)
 - Latest commit: `Level 0: scaffold` (the root commit on `main`).
 - Working tree: clean after the final Level 0 commit amendment.
 - Remote: `origin` is `https://github.com/Andrina-1409/MODEL-DOCTOR.git`.
-- Remote status: no refs existed before the first push.
+- Remote status: `main` now exists and tracks the local `main` branch.
 
 ## Last valid checkpoint
 
 - 2026-09-29: Level 0 scaffold implemented, tested, and committed as the root
   commit on `main` with the required message `Level 0: scaffold`; the selected
-  empty GitHub repository was configured as `origin`.
+  empty GitHub repository was configured as `origin` and received the Level 0
+  commit.
 
 ## Exact next action
 
-- Amend this remote configuration record into the Level 0 commit and push
-  `main` to `origin`. After a successful push, await explicit direction before
-  beginning Level 1.
+- Commit and push this post-push handoff record. After it is verified on
+  `origin/main`, await explicit direction before beginning Level 1.
 
 ## Do not change or do yet
 
