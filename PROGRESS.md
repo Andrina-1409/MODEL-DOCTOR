@@ -97,6 +97,9 @@ Level 0 - Scaffold (completed)
 - `git push --set-upstream origin main` - pushed the Level 0 commit to
   `https://github.com/Andrina-1409/MODEL-DOCTOR.git` and set `main` to track
   `origin/main`.
+- `git push` - pushed the post-push handoff record.
+- `git ls-remote origin refs/heads/main` - verified that the local post-push
+  handoff commit is present on `origin/main`.
 
 ## Tests actually executed
 
@@ -125,8 +128,9 @@ Level 0 - Scaffold (completed)
 
 - Repository: initialized on 2026-09-29.
 - Branch: `main`.
-- Latest commit: `Level 0: scaffold` (the root commit on `main`).
-- Working tree: clean after the final Level 0 commit amendment.
+- Latest commit: post-push progress handoff on `main`; the required Level 0 root
+  commit remains `Level 0: scaffold`.
+- Working tree: clean at the last verification before this final handoff update.
 - Remote: `origin` is `https://github.com/Andrina-1409/MODEL-DOCTOR.git`.
 - Remote status: `main` now exists and tracks the local `main` branch.
 
@@ -139,8 +143,8 @@ Level 0 - Scaffold (completed)
 
 ## Exact next action
 
-- Commit and push this post-push handoff record. After it is verified on
-  `origin/main`, await explicit direction before beginning Level 1.
+- Commit and push this final GitHub-verification handoff update. After that,
+  await explicit direction before beginning Level 1.
 
 ## Do not change or do yet
 
