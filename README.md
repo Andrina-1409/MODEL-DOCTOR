@@ -23,7 +23,8 @@ The final system provides:
 * suggested fix
 * React frontend
 * static demo mode
-* optional FastAPI backend
+* FastAPI backend for live uploaded-model diagnosis
+* live TinyCNN + MNIST upload mode
 * optional Spring Boot layer
 
 The diagnosis itself must always come from the trained meta-classifier. An LLM must never decide the diagnosis.
@@ -84,8 +85,13 @@ The project must:
 * Grad-CAM
 * React frontend
 * static JSON demo
-* optional FastAPI backend
+* FastAPI backend for live uploaded-model diagnosis
+* live TinyCNN + MNIST upload mode
 * optional Spring Boot layer
+
+## Live Upload Scope
+
+The current version also supports a genuine live upload path for a compatible trained TinyCNN checkpoint. The uploaded model is evaluated against the bundled MNIST diagnostic set, diagnostic features are extracted, the trained Random Forest doctor predicts a likely fault, and Grad-CAM evidence is generated. Ground-truth fault is not assumed for an uploaded model.
 
 ## Out of Scope
 
@@ -93,7 +99,7 @@ The current version does not attempt to support:
 
 * data drift
 * multiple simultaneous faults
-* multiple CNN architectures
+* arbitrary model architectures
 * large production models
 * CIFAR-10
 * text models
@@ -1307,3 +1313,30 @@ The coding agent is responsible for implementing and testing the software.
 The developer is responsible for understanding the implementation and being able to explain it during the viva.
 
 Never sacrifice scientific correctness just to make the demo look better.
+
+
+# 18. Running the Live Upload Mode
+
+The project now has two demo modes in the React app:
+
+1. **Professor Proof Library** — controlled checkpoints with known experimental ground truth.
+2. **Live Upload & Diagnose** — upload a real trained TinyCNN checkpoint and run the diagnostic pipeline.
+
+Start the backend from the project root:
+
+```powershell
+python -m pip install -r requirements.txt
+python -m uvicorn src.api:app --reload --port 8000
+```
+
+Then start the frontend in a second terminal:
+
+```powershell
+cd frontend
+npm.cmd install
+npm.cmd run dev
+```
+
+Open the Vite URL and select **Live Upload & Diagnose**. A compatible checkpoint can be selected from `proof_models/checkpoints/` for a repeatable live-upload demonstration.
+
+See `docs/live_diagnosis.md` for the complete pipeline, supported checkpoint formats, limitations, and professor-demo wording.

@@ -1,0 +1,29 @@
+{
+  "model_id": "model_0093",
+  "diagnosis": "class_imbalance",
+  "confidence": 0.9966666666666667,
+  "probabilities": {
+    "class_imbalance": 0.9966666666666667,
+    "healthy": 0.0,
+    "label_noise": 0.0,
+    "shortcut": 0.0033333333333333335
+  },
+  "features": {
+    "acc_clean": 0.8704,
+    "acc_min_class": 0.25112107623318386,
+    "acc_std_class": 0.2078305728807441,
+    "mean_confidence": 0.8840811660766602,
+    "mean_entropy": 0.355450643157959,
+    "conf_wrong_rate": 0.016,
+    "train_val_loss_gap": -0.17532675550507565,
+    "train_conf_minus_val_conf": 0.02993011151006597,
+    "acc_patch_matched": 0.8208000063896179,
+    "acc_patch_mismatched": 0.8087000250816345
+  },
+  "gradcam_images": [
+    "data/gradcam/model_0093.png"
+  ],
+  "corner_attention": 0.08227984279654747,
+  "suggested_fix": "rebalance the data or use a weighted loss",
+  "ground_truth": "class_imbalance"
+}

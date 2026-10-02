@@ -1,0 +1,8 @@
+[
+  {"proof_id":"proof_01","model_id":"model_0004","name":"Healthy CNN Baseline","architecture":"TinyCNN","dataset":"MNIST","fault":"healthy","demo_note":"Clean control model. Use this first to establish the normal behaviour profile."},
+  {"proof_id":"proof_02","model_id":"model_0001","name":"Class Imbalance Case","architecture":"TinyCNN","dataset":"MNIST","fault":"class_imbalance","demo_note":"Shows reduced minority-class behaviour and the corresponding diagnosis."},
+  {"proof_id":"proof_03","model_id":"model_0002","name":"Label Noise Case","architecture":"TinyCNN","dataset":"MNIST","fault":"label_noise","demo_note":"Shows the effect of corrupted training labels on model behaviour."},
+  {"proof_id":"proof_04","model_id":"model_0003","name":"Shortcut Learning Case","architecture":"TinyCNN","dataset":"MNIST","fault":"shortcut","demo_note":"Shows strong sensitivity to the class-dependent visual shortcut."},
+  {"proof_id":"proof_05","model_id":"model_0008","name":"Healthy Reproducibility Case","architecture":"TinyCNN","dataset":"MNIST","fault":"healthy","demo_note":"Second independent healthy seed for demonstrating that the Doctor is not tied to one checkpoint."},
+  {"proof_id":"proof_06","model_id":"model_0007","name":"Shortcut Stress Case","architecture":"TinyCNN","dataset":"MNIST","fault":"shortcut","demo_note":"Second shortcut model for showing repeatability of the behavioural diagnosis."}
+]

@@ -1,0 +1,7 @@
+,acc_clean,acc_clean,acc_min_class,acc_min_class,acc_std_class,acc_std_class,mean_confidence,mean_confidence,mean_entropy,mean_entropy,conf_wrong_rate,conf_wrong_rate,train_val_loss_gap,train_val_loss_gap,train_conf_minus_val_conf,train_conf_minus_val_conf,acc_patch_matched,acc_patch_matched,acc_patch_mismatched,acc_patch_mismatched
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+fault,,,,,,,,,,,,,,,,,,,,
+class_imbalance,0.899816,0.038453,0.603784,0.242315,0.117598,0.078769,0.901233,0.017847,0.299339,0.046636,0.012124,0.006516,-0.119328,0.104637,0.021856,0.018076,0.85902,0.043987,0.861688,0.034019
+healthy,0.952008,0.00597,0.909752,0.011731,0.023496,0.002943,0.937654,0.007284,0.199992,0.022031,0.00608,0.000896,0.016977,0.00456,-0.009512,0.001627,0.91566,0.011123,0.907428,0.019386
+label_noise,0.942716,0.006371,0.888322,0.018463,0.030995,0.004608,0.550527,0.108028,1.516957,0.295603,0.0,0.0,0.836375,0.099573,-0.010422,0.002288,0.928708,0.009373,0.930716,0.012832
+shortcut,0.750724,0.027452,0.104312,0.066153,0.286641,0.026351,0.851465,0.007063,0.419946,0.019033,0.045436,0.012038,-0.71294,0.134272,0.122126,0.005961,0.983576,0.001776,0.358944,0.038181

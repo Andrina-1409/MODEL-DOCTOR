@@ -1,0 +1,29 @@
+{
+  "model_id": "model_0071",
+  "diagnosis": "shortcut",
+  "confidence": 1.0,
+  "probabilities": {
+    "class_imbalance": 0.0,
+    "healthy": 0.0,
+    "label_noise": 0.0,
+    "shortcut": 1.0
+  },
+  "features": {
+    "acc_clean": 0.735,
+    "acc_min_class": 0.09650924024640657,
+    "acc_std_class": 0.3005472266780401,
+    "mean_confidence": 0.8483163208007812,
+    "mean_entropy": 0.4259762825012207,
+    "conf_wrong_rate": 0.048,
+    "train_val_loss_gap": -0.7770330769300461,
+    "train_conf_minus_val_conf": 0.12332125244140624,
+    "acc_patch_matched": 0.9824000000953674,
+    "acc_patch_mismatched": 0.34689998626708984
+  },
+  "gradcam_images": [
+    "data/gradcam/model_0071.png"
+  ],
+  "corner_attention": 0.10551384750433115,
+  "suggested_fix": "remove or randomize the spurious cue and use augmentation",
+  "ground_truth": "shortcut"
+}

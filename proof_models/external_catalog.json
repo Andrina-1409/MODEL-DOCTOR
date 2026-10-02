@@ -1,0 +1,29 @@
+[
+  {
+    "name":"ResNet-18 CIFAR-10",
+    "source":"Hugging Face",
+    "model_url":"https://huggingface.co/bhumong/resnet18-cifar10",
+    "dataset":"CIFAR-10",
+    "task":"image classification",
+    "status":"external_reference",
+    "note":"Public model card. Download once and store locally before attempting an external proof-pack diagnosis."
+  },
+  {
+    "name":"ResNet-18 ImageNet-1K",
+    "source":"TorchVision",
+    "model_url":"https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.resnet18.html",
+    "dataset":"ImageNet-1K",
+    "task":"image classification",
+    "status":"external_reference",
+    "note":"Official weights and preprocessing are documented by TorchVision."
+  },
+  {
+    "name":"MobileNetV3-Small ImageNet-1K",
+    "source":"TorchVision",
+    "model_url":"https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.mobilenet_v3_small.html",
+    "dataset":"ImageNet-1K",
+    "task":"image classification",
+    "status":"external_reference",
+    "note":"Official weights and preprocessing are documented by TorchVision."
+  }
+]

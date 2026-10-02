@@ -1,0 +1,29 @@
+{
+  "model_id": "model_0060",
+  "diagnosis": "healthy",
+  "confidence": 1.0,
+  "probabilities": {
+    "class_imbalance": 0.0,
+    "healthy": 1.0,
+    "label_noise": 0.0,
+    "shortcut": 0.0
+  },
+  "features": {
+    "acc_clean": 0.9521,
+    "acc_min_class": 0.9153696498054474,
+    "acc_std_class": 0.02054384682495866,
+    "mean_confidence": 0.936692465209961,
+    "mean_entropy": 0.2032473358154297,
+    "conf_wrong_rate": 0.0044,
+    "train_val_loss_gap": 0.016779972982406605,
+    "train_conf_minus_val_conf": -0.00812021913528449,
+    "acc_patch_matched": 0.9236999750137329,
+    "acc_patch_mismatched": 0.9355000257492065
+  },
+  "gradcam_images": [
+    "data/gradcam/model_0060.png"
+  ],
+  "corner_attention": 0.05976922885666068,
+  "suggested_fix": "no fault detected",
+  "ground_truth": "healthy"
+}

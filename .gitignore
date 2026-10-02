@@ -8,9 +8,16 @@ venv/
 
 models/*.pt
 models/*.pth
+*.pt
+*.pth
+*.ckpt
 frontend/node_modules/
 frontend/dist/
 frontend/.env
+data/MNIST/
 
 .DS_Store
 Thumbs.db
+
+models/**/*.pt
+models/**/*.pth

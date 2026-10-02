@@ -6,3 +6,6 @@ numpy
 matplotlib
 pytest
 joblib
+fastapi
+uvicorn
+python-multipart

@@ -1,0 +1,29 @@
+{
+  "model_id": "model_0058",
+  "diagnosis": "label_noise",
+  "confidence": 0.9833333333333333,
+  "probabilities": {
+    "class_imbalance": 0.0033333333333333335,
+    "healthy": 0.013333333333333334,
+    "label_noise": 0.9833333333333333,
+    "shortcut": 0.0
+  },
+  "features": {
+    "acc_clean": 0.94,
+    "acc_min_class": 0.8866279069767442,
+    "acc_std_class": 0.027347042851629273,
+    "mean_confidence": 0.4910856262207031,
+    "mean_entropy": 1.6958767303466797,
+    "conf_wrong_rate": 0.0,
+    "train_val_loss_gap": 0.9025890119552612,
+    "train_conf_minus_val_conf": -0.00803549265861514,
+    "acc_patch_matched": 0.9397000074386597,
+    "acc_patch_mismatched": 0.9476000070571899
+  },
+  "gradcam_images": [
+    "data/gradcam/model_0058.png"
+  ],
+  "corner_attention": 0.026841260654331504,
+  "suggested_fix": "clean the labels or use a robust loss",
+  "ground_truth": "label_noise"
+}

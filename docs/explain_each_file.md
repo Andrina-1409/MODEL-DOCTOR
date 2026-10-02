@@ -1,0 +1,22 @@
+# Model Doctor — File Guide
+
+- `src/data.py` — deterministic MNIST loading, subset selection, validation, and DataLoaders.
+- `src/model.py` — TinyCNN architecture and feature representations.
+- `src/train.py` — deterministic TinyCNN training and checkpoint utilities.
+- `src/fault_injection.py` — controlled healthy/imbalance/noise/shortcut transformations.
+- `src/probes.py` — shortcut probes and corner-attention helper.
+- `src/train_zoo.py` — resumable 100-model zoo training.
+- `src/extract_features.py` — one diagnostic feature row per model.
+- `src/train_doctor.py` — Random Forest doctor, baselines, cross-validation, and reports.
+- `src/gradcam.py` — manual Grad-CAM implementation.
+- `src/diagnose.py` — central model diagnosis function and JSON-compatible result.
+- `src/export_demo_data.py` — static React data export.
+- `tests/` — behavioural tests for the major modules.
+- `frontend/src/api/client.js` — static JSON data client.
+- `frontend/src/components/` — UI components for diagnosis, probabilities, features, Grad-CAM, and suggested fixes.
+- `frontend/src/App.jsx` — demo state and page composition.
+- `reports/` — generated evaluation artefacts.
+- `features/` — generated model-level diagnostic data.
+- `models/zoo/` — generated model checkpoints and manifest.
+- `docs/API_CONTRACT.md` — diagnosis response contract.
+- `PROGRESS.md` — chronological project checkpoint and actual results log.
