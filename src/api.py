@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import tempfile
+import os
 from pathlib import Path
 
 from fastapi import FastAPI, File, UploadFile
@@ -9,6 +10,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from .live_diagnosis import diagnose_uploaded_model
 
 ROOT = Path(__file__).resolve().parents[1]
+LOCAL_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+DEPLOYED_ORIGINS = [
+    origin.strip().rstrip("/")
+    for origin in os.getenv("CORS_ALLOW_ORIGINS", "").split(",")
+    if origin.strip()
+]
 
 app = FastAPI(
     title="Model Doctor API",
@@ -18,7 +25,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=list(dict.fromkeys(LOCAL_ORIGINS + DEPLOYED_ORIGINS)),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -1,0 +1,13 @@
+.git
+.venv
+venv
+__pycache__
+**/__pycache__
+*.py[cod]
+frontend/node_modules
+frontend/dist
+tests
+notebooks
+models
+proof_models/checkpoints
+external_models

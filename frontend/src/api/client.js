@@ -1,3 +1,5 @@
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "").replace(/\/+$/, "");
+
 export async function loadModelIndex() {
   const response = await fetch("/data/index.json");
   if (!response.ok) throw new Error("Could not load demo model index.");
@@ -19,7 +21,7 @@ export async function loadDiagnosis(modelId) {
 export async function liveDiagnose(file) {
   const body = new FormData();
   body.append("file", file);
-  const response = await fetch("/api/live/diagnose", { method: "POST", body });
+  const response = await fetch(`${API_BASE_URL}/api/live/diagnose`, { method: "POST", body });
   const data = await response.json();
   if (!response.ok || data.error) throw new Error(data.error || "Live diagnosis failed.");
   return data;
